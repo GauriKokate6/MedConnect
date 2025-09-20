@@ -249,16 +249,16 @@ const paymentRazorpay = async (req, res) => {
             return res.json({ success: false, message: 'Appointment Cancelled or not found' })
         }
 
-        // creating options for razorpay payment
-        // const options = {
-        //     amount: appointmentData.amount * 100,
-        //     currency: process.env.CURRENCY,
-        //     receipt: appointmentId,
-        // }
+        //creating options for razorpay payment
+
+        const options = {
+            amount: appointmentData.amount * 100,
+            currency: process.env.CURRENCY,
+            receipt: appointmentId,
+        }
 
         // creation of an order
-        // const order = await razorpayInstance.orders.create(options)
-
+        
         res.json({ success: true, order })
 
     } catch (error) {
