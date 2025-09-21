@@ -51,7 +51,7 @@ const registerUser = async (req, res) => {
         const user = await newUser.save()
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET)
 
-       
+
         res.json({ success: true, message: "Account created! Please log in." })
 
     } catch (error) {
@@ -90,7 +90,7 @@ const loginUser = async (req, res) => {
 const getProfile = async (req, res) => {
 
     try {
-        const  userId  = req.userId
+        const userId = req.userId
         const userData = await userModel.findById(userId).select('-password')
 
         res.json({ success: true, userData })
@@ -226,7 +226,7 @@ const cancelAppointment = async (req, res) => {
 const listAppointment = async (req, res) => {
     try {
 
-        const  userId  = req.userId
+        const userId = req.userId
         const appointments = await appointmentModel.find({ userId })
 
         res.json({ success: true, appointments })
@@ -258,7 +258,7 @@ const paymentRazorpay = async (req, res) => {
         }
 
         // creation of an order
-         const order = await razorpayInstance.orders.create(options)
+        const order = await razorpayInstance.orders.create(options)
         res.json({ success: true, order })
 
     } catch (error) {
@@ -297,6 +297,6 @@ export {
     cancelAppointment,
     paymentRazorpay,
     verifyRazorpay
-   
-    
+
+
 }
