@@ -28,7 +28,7 @@ const Footer = () => {
      <div>  
      <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
      <ul className='flex flex-col gap-2 text-gray-600'>
-        <li>+91 9857563666</li>
+        <li>+91 8275641089</li>
         <li>gaurikokate90@gmail.com</li>
      </ul> 
     </div>
@@ -36,7 +36,7 @@ const Footer = () => {
     {/*copyright*/}
 <div>
     <hr/>
-    <p className='py-5 text-sm text-center'>CopyRight 2025@ MediConnect-All Right Reserved.</p>
+    <p className='py-5 text-sm text-center'>CopyRight 2025@ MedConnect-All Right Reserved.</p>
  </div>
  </div>
  </div>
